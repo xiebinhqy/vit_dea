@@ -1,0 +1,69 @@
+import { defineConfig } from 'vitepress'
+import { set_sidebar } from "./utils/auto_sidebar.mjs";	// 改成自己的路径
+
+// https://vitepress.dev/reference/site-config
+export default defineConfig({
+  title: "一武智能辅助文档",
+  description: "A VitePress Site",
+  themeConfig: {
+    outlineTitle:"目录",
+    outline:[2,6],
+    logo:'/logo.png',
+    // https://vitepress.dev/reference/default-theme-config
+    nav: [
+      {
+        text: "home",
+        items: [
+          {text: "首页",link: "/"},
+          {text: "Examples",link: "/markdown-examples"},
+        ],
+      },
+      {text: "自动生成侧边栏",link: "/front-end/react/"},
+      {text: "自动生成侧边栏2",link: "/backend/rabbitmq/"},
+    ],
+
+    // sidebar: [
+    //   {
+    //     text: 'Examples',
+    //     items: [
+    //       { text: 'Markdown Examples', link: '/markdown-examples' },
+    //       { text: 'Runtime API Examples', link: '/api-examples' },
+    //     ],
+    //   },
+    //   {
+    //     text: 'test2',
+    //     items: [
+    //       { text: 'Markdown 2', link: '/markdown-examples' },
+    //       { text: 'Runtime API 2', link: '/api-examples' },
+    //     ],
+    //   },
+    //   {
+    //     text: 'test2',
+    //     items: [
+    //       { text: 'ront-end', link: '/front-end/react' },
+    //       { text: 'backend', link: '/backend/index' },
+    //       { text: 'backend', link: '/backend/index' },
+    //     ],
+    //   },
+    // ],
+    sidebar: {
+      //自动生成侧边栏-基于顶部导航
+      "/front-end/react": set_sidebar("/front-end/react"),
+      "/backend/rabbitmq": set_sidebar("/backend/rabbitmq"),
+      //左侧手动增加侧边栏
+      text: '"Examples',
+      items:[
+        {text: 'Markdown Examples',link: '/markdown-examples'},
+        { text: 'Runtime API Examples', link: '/api-examples' },
+      ],
+    },
+
+    socialLinks: [
+      { icon: 'github', link: 'https://github.com/vuejs/vitepress' },
+    ],
+    //底部配置
+    footer: {
+      copyright:"Copyright@ 2023 Albert zhang",
+    },
+  },
+})
