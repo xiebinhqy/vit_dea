@@ -56,9 +56,9 @@ export default defineConfig({
       {
         text:'Dropdown Menu',
         items: [
-          { text: 'Item A', link: '/front-end/item-1' },
-          { text: 'Item b', link: '/front-end/item-2' },
-          { text: 'Item c', link: '/front-end/item-3' },
+          { text: 'Item A', link: '/front-end/' },
+          { text: 'Item b', link: '/item-2' },
+          { text: 'Item c', link: '/item-3' },
         ]
       },
     ],
@@ -156,10 +156,27 @@ export default defineConfig({
         }
       ],
       '/front-end': [
-        {text:'ietm-home',link: '/front-end/item-1'},
-        {text:'ietm-one',link: '/front-end/item-2'},
-        {text:'ietm-two',link: '/front-end/item-3'},
-      ]    
+        {
+          text:'Item A',
+          collapsed: false,
+          items:[
+            {text:'shouye',link: '/front-end/index'},
+            {text:'front-one',link: '/front-end/item-1'},
+            {text:'front-two',link: '/front-end/item-2'},
+            {text:'front-three',link: '/front-end/item-3'},
+          ]
+        },
+        {
+          text:'晋升通道',
+          collapsed: true,
+          items:[
+            {text:'晋升通道首页',link: '/front-end/jinsheng_index'},
+            {text:'front-one',link: '/front-end/jinsheng_item_1'},
+            {text:'front-two',link: '/front-end/jinsheng_item_2'},
+            {text:'front-three',link: '/front-end/jinsheng_item_3'},
+          ]
+        },
+      ],    
     },
 
     socialLinks: [
@@ -168,7 +185,7 @@ export default defineConfig({
     //底部配置
     footer: {
       message: 'Released under the MIT License.',
-      copyright:'Copyright © 2019-present Evan You',
+      copyright:'Copyright © 2023-present Evan You',
     },
     // 设置搜索框的样式
     search: {
