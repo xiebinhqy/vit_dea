@@ -19,7 +19,7 @@ export default defineConfig({
         items: [
           {text: "首页",link: "/"},
           {text: "Examples",link: "/markdown-examples"},
-          //zhe段话是用作测试使用
+
         ],
       },
       {text: "Markdown示例",link: "/markdown-examples"},
