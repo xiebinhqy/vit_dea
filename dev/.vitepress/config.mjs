@@ -6,12 +6,12 @@ export default defineConfig({
   title: "一武智能辅助文档",
   description: "A VitePress Site",
   head: [["link", { rel: "icon", href: "/vit_dea/logo.png" }]],
-  outDir: "../public",
+  outDir: "../docs",
   themeConfig: {
     base: '/vit_dea/',
     outlineTitle:"目录",
     outline:[2,6],
-    logo:'/vit_dea/logo.png',
+    logo:'/logo.png',
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       {
