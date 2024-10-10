@@ -7,7 +7,7 @@ export default defineConfig({
   description: "A VitePress Site",
   head: [["link", { rel: "icon", href: "/logo.png" }]],
   themeConfig: {
-    base: "/",
+    base: "/vit_dea/",
     outlineTitle:"目录",
     outline:[2,6],
     logo:'/logo.png',
