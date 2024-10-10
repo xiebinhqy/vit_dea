@@ -2,6 +2,10 @@
 # https://vitepress.dev/reference/default-theme-home-page
 layout: home
 
+title: 一武智能辅助文档
+titleTemplate: 智能辅助管家
+editLink: true
+lastUpdated: true
 hero:
   name: "一武智能辅助文档"
   text: "智能辅助管家"
@@ -11,10 +15,16 @@ hero:
     alt: 背景图片
   actions:
     - theme: brand
-      text: Markdown 示例
+      text: 官网
+      link: https://bl.yiwukj.us.kg/
+    - theme: brand
+      text: Blog
       link: /markdown-examples
     - theme: alt
-      text: API 示例
+      text: 文 档
+      link: /markdown-examples
+    - theme: alt
+      text: 使用教程
       link: /api-examples
 
 features:
