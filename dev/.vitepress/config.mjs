@@ -5,7 +5,9 @@ import { set_sidebar } from "./utils/auto_sidebar.mjs";	// 改成自己的路径
 export default defineConfig({
   title: "一武智能辅助文档",
   description: "A VitePress Site",
+  head: [["link", { rel: "icon", href: "/vit_dea/logo.png" }]],
   themeConfig: {
+    base: "/vit_dea/",
     outlineTitle:"目录",
     outline:[2,6],
     logo:'/logo.png',
@@ -16,8 +18,10 @@ export default defineConfig({
         items: [
           {text: "首页",link: "/"},
           {text: "Examples",link: "/markdown-examples"},
+          //zhe段话是用作测试使用
         ],
       },
+      {text: "Markdown示例",link: "/markdown-examples"},
       {text: "自动生成侧边栏",link: "/front-end/react/"},
       {text: "自动生成侧边栏2",link: "/backend/rabbitmq/"},
     ],
@@ -53,7 +57,7 @@ export default defineConfig({
       //左侧手动增加侧边栏
       text: '"Examples',
       items:[
-        {text: 'Markdown Examples',link: '/markdown-examples'},
+        {text: 'Markdown示例',link: '/markdown-examples'},
         { text: 'Runtime API Examples', link: '/api-examples' },
       ],
     },
@@ -65,5 +69,25 @@ export default defineConfig({
     footer: {
       copyright:"Copyright@ 2023 Albert zhang",
     },
+    // 设置搜索框的样式
+    search: {
+        provider: "local",
+        options: {
+          translations: {
+            button: {
+              buttonText: "搜索文档",
+              buttonAriaLabel: "搜索文档",
+            },
+            modal: {
+              noResultsText: "无法找到相关结果",
+              resetButtonTitle: "清除查询条件",
+              footer: {
+                selectText: "选择",
+                navigateText: "切换",
+              },
+            },
+          },
+        },
+      },
   },
 })
