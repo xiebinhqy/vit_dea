@@ -5,10 +5,10 @@ import { set_sidebar } from "./utils/auto_sidebar.mjs";	// 改成自己的路径
 export default defineConfig({
   title: "一武智能辅助文档",
   description: "A VitePress Site",
-  head: [["link", { rel: "icon", href: "/logo.png" }]],
+  head: [["link", { rel: "icon", href: "/vit_dea/logo.png" }]],
   outDir: "../docs",
+  base: "/vit_dea/",
   themeConfig: {
-    base: 'vit_dea',
     outlineTitle:"目录",
     outline:[2,6],
     logo:'/logo.png',
