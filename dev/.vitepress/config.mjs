@@ -10,7 +10,7 @@ export default defineConfig({
   head: [["link", { rel: "icon", href: "/vit_dea/logo.png" }]],
   outDir: "../docs", //build输出路径
   base: "/vit_dea/", //github-路径
-  lastUpdated: true, //更新时间显示
+  lastUpdated: true, //最后更新时间显示
 
   //组件引入
   markdown: {
@@ -29,17 +29,36 @@ export default defineConfig({
     outline:[2,6],
     logo:'/logo.png',
     siteTitle:'官方文档',
+    //允许自定义上次更新文本和日期格式
+    lastUpdated:{
+      text:'Updated at',
+      formatOptions:{
+        dateStyle: 'full',
+        timeStyle: 'medium'
+      }
+    },
+    //自定义出现上一页和下一页链接上方文本
+    docFooter:{
+      prev: 'pagina prior',
+      next: 'proxima pagina',
+    },
+    // 底部添加链接文本
+    editLink:{
+      pattern: 'https://github.com/vuejs/vitepress/edit/main/docs/:path',
+      text: 'Edit this page on GitHub',
+    },
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       {text: "首页",link: '/'},
       {text: "指南",link: '/guide/'},
       {text: "组件",link: '/components/basic-component1'},
+      {text: "前端",link: '/backend/index'},
       {
         text:'Dropdown Menu',
         items: [
-          { text: 'Item A', link: '/item-1' },
-          { text: 'Item b', link: '/item-2' },
-          { text: 'Item c', link: '/item-3' },
+          { text: 'Item A', link: '/front-end/item-1' },
+          { text: 'Item b', link: '/front-end/item-2' },
+          { text: 'Item c', link: '/front-end/item-3' },
         ]
       },
     ],
@@ -88,7 +107,25 @@ export default defineConfig({
           items:[
             {text:'组件库介绍',link: '/guide/'},
             {text:'快速开始',link: '/guide/quickstart'},
-            {text:'快速部署',link: '/guide/home-work'},
+            //{text:'快速部署',link: '/guide/home-work'},
+            {
+              text:'快速部署',
+              items:[
+                {text:'下一步首页',link: '/guide/xiayiji'},
+                {text:'下级第一步',link: '/guide/xiayiji/diyibu'},
+                {text:'下级第二部',link: '/guide/xiayiji/dierbu'},
+              ],
+            }
+          ]
+        }
+      ],
+      '/backend': [
+        {
+          text:'前端',
+          items:[
+            {text:'最开始介绍',link: '/backend/'},
+            {text:'入门',link: '/backend/rabbitmq入门'},
+            {text:'精通',link: '/backend/rocketmq精通'},
           ]
         }
       ],
@@ -117,7 +154,12 @@ export default defineConfig({
             {text:'高级组件 2',link: '/components/pro-component2'},
           ]
         }
-      ]
+      ],
+      '/front-end': [
+        {text:'ietm-home',link: '/front-end/item-1'},
+        {text:'ietm-one',link: '/front-end/item-2'},
+        {text:'ietm-two',link: '/front-end/item-3'},
+      ]    
     },
 
     socialLinks: [

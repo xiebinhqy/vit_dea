@@ -1,11 +1,15 @@
-
-
+---
+lastUpdated: false
+editLink: true
+---
 
 # Basic Component 1
 
----
+
+![alt text](https://img.deattor.us.kg/file/1728391126207_qingxidiandian.png)
+
+
 组件介绍
-<preview path="../demo/button-demo-1.vue" title="基本使用" description="xxxxx"></preview>
 
 ---
 
