@@ -6,8 +6,9 @@ export default defineConfig({
   title: "一武智能辅助文档",
   description: "A VitePress Site",
   head: [["link", { rel: "icon", href: "/logo.png" }]],
+  outDir: "../public",
   themeConfig: {
-    base: "/vit_dea/",
+    base: '/vit_dea/',
     outlineTitle:"目录",
     outline:[2,6],
     logo:'/logo.png',
