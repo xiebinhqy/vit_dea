@@ -8,7 +8,7 @@ export default defineConfig({
   head: [["link", { rel: "icon", href: "/logo.png" }]],
   outDir: "../docs",
   themeConfig: {
-    base: '/',
+    base: 'vit_dea',
     outlineTitle:"目录",
     outline:[2,6],
     logo:'/logo.png',
